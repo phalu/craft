@@ -1,0 +1,26 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "commands": [
+    {
+      "name": "craft",
+      "identifier": "main",
+      "shortcut": "cmd j",
+      "script": "./my-command.ts",
+      "handlers": {
+        "run": "onRun",
+        "actions": {
+					"OpenDocument": "onOpen",
+          "Shutdown": "onShutdown",
+					 "SelectionChanged.finish": "onSelectionChanged"
+        }
+      }
+    }
+  ],
+  "menu": {
+    "isRoot": true,
+    "items": [
+      "main"
+    ]
+  }
+}
